@@ -1,0 +1,129 @@
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    margin: 0 0 20px 0;
+    color: #222;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-transform: none;
+    text-shadow: none;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.reveal h1,
+.reveal h3,
+.reveal h5 {
+    font-family: "Source Han Sans Heavy", Helvetica, sans-serif;
+}
+
+.reveal h2,
+.reveal h4,
+.reveal h6,
+.reveal p{
+    font-family: "Source Han Sans Regular", Helvetica, sans-serif;
+}
+
+.reveal h1,
+.reveal h2 {
+    font-size: 2.5em;
+}
+
+.reveal h3,
+.reveal h4 {
+    font-size: 1.6em;
+}
+
+.reveal h5,
+.reveal h6 {
+    font-size: 1em;
+}
+
+.reveal p {
+    text-align: left;
+}
+
+span.inline-subtitle {
+    font-family: "Source Han Sans Light", Helvetica, sans-serif;
+    margin-left: 0.3em;
+}
+
+.reveal pre {
+    width: 95%;
+}
+
+.reveal pre code {
+    max-height: 500px;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+    display: list-item;
+}
+
+.reveal th{
+    font-weight: bold;
+}
+
+.reveal table{
+    font-size: 80%;
+    width: 90%;
+}
+
+.reveal table caption {
+    font-size: 100%;
+    font-weight: bold;
+    caption-side: top;
+    color: #222;
+}
+
+.reveal section img {
+    display: block;
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+.reveal blockquote {
+    font-style: normal;
+    width: 80%;
+    box-shadow: none;
+}
+
+.reveal cite {
+    font-style: italic;
+}
+
+.reveal blockquote > p {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.reveal .blockquote-footer {
+    margin-top: 0.5em;
+}
+
+.reveal .slides {
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    text-align: left;
+    /*width: 100%;*/
+}
+
+.reveal .slides > section {
+    min-height: 99%;
+    top: 5%;
+}
+
+.reveal .slides > section > section {
+    min-height: 99%;
+}
