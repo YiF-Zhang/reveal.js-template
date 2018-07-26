@@ -24,9 +24,10 @@
     </script>
 
     <!-- echarts -->
-    <!--<script src="plugin/echarts/echarts.js"></script>-->
+    <script src="plugin/echarts/echarts.js"></script>
 
-    <!-- chart.js -->
+    <!-- font awesome -->
+    <link href="plugin/font-awesome/css/all.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
@@ -95,6 +96,9 @@
                         <a href="https://getbootstrap.com/docs/4.1/content/typography/">
                             Hyperlink
                         </a>
+                    </li>
+                    <li>
+                        A <code>font-awesome</code> icon <i class="fas fa-user fa-1x" style="text-align: center"></i>
                     </li>
                 </div>
             </section>
@@ -226,7 +230,8 @@
                                          height="150px">
                                     <div class="card-body" style="margin-top: 100px">
                                         <h6 class="card-title" style="font-weight: bold">Facebook</h6>
-                                        <p class="card-text" style="font-size: 70%; font-weight: lighter">Some quick example text to build on
+                                        <p class="card-text" style="font-size: 70%; font-weight: lighter">Some quick
+                                            example text to build on
                                             the card title and make up the bulk of the card's content.</p>
                                     </div>
                                 </div>
@@ -257,7 +262,6 @@
                     </div>
                 </div>
             </section>
-
         </section>
         <section>
             <section
@@ -268,8 +272,101 @@
                     <p class="text-right">A demo of Jumbotron</p>
                 </div>
             </section>
-            <section data-background-iframe="asset/html/flightVisualization/lines3d-airline-on-globe.html" data-background-interactive>
-                <h2>Iframe</h2>
+        </section>
+        <section data-background-iframe="asset/html/flightVisualization/lines3d-airline-on-globe.html"
+                 data-background-interactive>
+            <div class="float-left" style="width: 40%;">
+                <h3 class="text-left" style="margin-top: 200px; color: white">Airflight</h3>
+                <p class="text-left" style="color: white">A demo of interactive background</p>
+            </div>
+        </section>
+        <section>
+            <section style="flex-wrap: wrap; align-content: flex-start">
+                <div style="width: 100%; margin-bottom: 50px">
+                    <h3>Icons <span class="text-muted inline-subtitle">From <code>font-awsome</code></span></h3>
+                </div>
+                <div style="width: 100%">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col" style="padding-left: 20px; padding-right: 20px">
+                                <i class="fas fa-user fa-2x" style="text-align: center; display: block"></i>
+                            </div>
+                            <div class="col" style="padding-left: 20px; padding-right: 20px">
+                                <i class="fas fa-basketball-ball fa-2x" style="text-align: center; display: block"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <div style="width: 100%; margin-bottom: 50px">
+                    <h3>Charts <span class="text-muted inline-subtitle">Bar</span></h3>
+                </div>
+                <div class="mx-auto" style="width: 1200px !important; height: 600px !important; margin-top: 80px">
+                    <canvas data-chart="bar" width="100% !important" height="100% !important">
+                        <!--
+                        {
+                         "data": {
+                          "labels": ["January"," February"," March"," April"," May"," June"," July"],
+                          "datasets": [
+                           {
+                            "data":[65,59,80,81,56,55,40],
+                            "label":"My first dataset","backgroundColor":"rgba(20,220,220,.8)"
+                           },
+                           {
+                            "data":[28,48,40,19,86,27,90],
+                            "label":"My second dataset","backgroundColor":"rgba(220,120,120,.8)"
+                           }
+                          ]
+                         },
+                         "options": {
+                         "responsive": true,
+                         "maintainAspectRatio": false,
+                         "title": {
+                            "text": "Title",
+                            "display": true
+                          }
+                         }
+                        }
+                        -->
+                    </canvas>
+                </div>
+            </section>
+            <section>
+                <div style="width: 100%; margin-bottom: 50px">
+                    <h3>Charts <span class="text-muted inline-subtitle">Line</span></h3>
+                </div>
+                <div class="mx-auto" style="width: 1200px !important; height: 600px !important; margin-top: 80px">
+                    <canvas data-chart="bar" width="100% !important" height="100% !important">
+                        <!--
+                        {
+                         "data": {
+                          "labels": ["January"," February"," March"," April"," May"," June"," July"],
+                          "datasets": [
+                           {
+                            "data":[65,59,80,81,56,55,40],
+                            "label":"My first dataset","backgroundColor":"rgba(20,220,220,.8)"
+                           },
+                           {
+                            "data":[28,48,40,19,86,27,90],
+                            "label":"My second dataset","backgroundColor":"rgba(220,120,120,.8)"
+                           }
+                          ]
+                         },
+                         "options": {
+                         "responsive": true,
+                         "maintainAspectRatio": false,
+                         "title": {
+                            "text": "Title",
+                            "display": true
+                          }
+                         }
+                        }
+                        -->
+                    </canvas>
+                </div>
             </section>
         </section>
     </div>
@@ -299,16 +396,47 @@
                 callback: function () {
                     hljs.initHighlightingOnLoad();
                 }
-            }
+            },
+            {src: 'plugin/chart-js/Chart.js'},
+            {src: 'plugin/chart-js/csv2chart.js'},
         ],
         center: false,
+
+        //If you want to adjust the ratio of slides, pls change width only
         width: 1400,
         height: 900,
+
         transition: 'slide',
         transitionSpeed: 'fast',
+
         history: true,
         mouseWheel: true,
         control: false,
+
+        chart: {
+            defaults: {
+                global: {
+                    // title: { fontColor: "#FFF" },
+                    // legend: {
+                    //     labels: { fontColor: "#FFF" },
+                    // },
+                    // defaultFontFamily: "Source Han Sans Regular",
+                    defaultFontSize: 18,
+                    title: {
+                        fontSize: 24
+                    }
+                },
+                scale: {
+                    // scaleLabel: { fontColor: "#FFF" },
+                    // gridLines: { color: "#FFF", zeroLineColor: "#FFF" },
+                    // ticks: { fontColor: "#FFF" },
+                }
+            },
+            // line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ]},
+            // bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+            // pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+            // radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+        },
     });
 </script>
 </body>

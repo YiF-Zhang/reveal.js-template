@@ -24,9 +24,9 @@
 </head>
 <body style="margin: 0">
 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-<div id="flight-vis" style="height: auto; width: auto"></div>
+<div id="flight-vis" style="height: 100vh; width: 100vw"></div>
 <script type="text/javascript">
-    $.getJSON('flights.json', function(data) {
+    $.getJSON('https://raw.githubusercontent.com/YiF-Zhang/reveal.js-template/master/asset/html/flightVisualization/flights.json', function(data) {
 
         function getAirportCoord(idx) {
             return [data.airports[idx][3], data.airports[idx][4]];
@@ -59,7 +59,9 @@
 
                 viewControl: {
                     autoRotate: false
-                }
+                },
+
+                left: '15%'
             },
             series: {
 

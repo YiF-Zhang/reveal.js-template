@@ -2496,7 +2496,7 @@ var Texture2D = __WEBPACK_IMPORTED_MODULE_0__Texture__["a" /* default */].extend
     load: function (src, crossOrigin) {
         var image = __WEBPACK_IMPORTED_MODULE_2__core_vendor__["a" /* default */].createImage();
         if (crossOrigin) {
-            image.crossOrigin = crossOrigin;
+            image.crossOrigin = 'anonymous';
         }
         var self = this;
         image.onload = function () {
@@ -11153,7 +11153,7 @@ var TextureCube = __WEBPACK_IMPORTED_MODULE_0__Texture__["a" /* default */].exte
         __WEBPACK_IMPORTED_MODULE_2__core_util__["a" /* default */].each(imageList, function (src, target){
             var image = __WEBPACK_IMPORTED_MODULE_4__core_vendor__["a" /* default */].createImage();
             if (crossOrigin) {
-                image.crossOrigin = crossOrigin;
+                image.crossOrigin = 'anonymous';
             }
             image.onload = function () {
                 loading --;
